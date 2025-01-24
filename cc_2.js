@@ -19,3 +19,26 @@ let average = sum / scores.length;
 
 console.log("Updated scores:", scores);
 console.log("Average score:", average);
+
+// Task 3 - Working with Objects
+let employee = {
+    name: "Jason Calliste",
+    age: 28,
+    department: "IT",
+    isActive: true
+};
+
+// Update department
+employee.department = "Marketing and Innovation";
+
+// Add new position property
+employee.position = "Senior Lab Coordinator";
+
+// Log updated employee object
+console.log("Updated employee details:", {
+    Name: employee.name,
+    Age: employee.age,
+    Department: employee.department,
+    Position: employee.position,
+    "Active Status": employee.isActive
+});
