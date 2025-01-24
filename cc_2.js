@@ -77,3 +77,36 @@ customers.forEach((customer, index) => {
     Email: ${customer.email}
     Purchase Amount: $${customer.purchaseAmount}`);
 });
+
+//Task 5 - objects methods
+// Calculate total purchase amount 
+const totalPurchases = customers.reduce((sum, customer) => 
+    sum + customer.purchaseAmount, 0);
+console.log(`Total purchase amount: $${totalPurchases}`);
+
+
+//  Object order with properties: orderId, customerName, and amount
+const order = {
+    orderId: "ORD-2025-TT",
+    customerName: "Jason Calliste",
+    amount: 250.00,
+    
+    // Method to calculate tax
+    calculateTax: function() {
+        const TAX_RATE = 0.10; // 10% tax rate
+        return this.amount * TAX_RATE;
+    },
+    // Method to display order details
+    displayOrderDetails: function() {
+        console.log(`
+    Order Details:
+    Order ID: ${this.orderId}
+    Customer Name: ${this.customerName}
+    Amount: $${this.amount}
+    Tax amount: $${this.calculateTax()}
+    `);
+    }
+};
+
+// Log order details
+order.displayOrderDetails();
