@@ -31,14 +31,49 @@ let employee = {
 // Update department
 employee.department = "Marketing and Innovation";
 
-// Add new position property
+// Add new position 
 employee.position = "Senior Lab Coordinator";
 
-// Log updated employee object
+// Log updated employee information
 console.log("Updated employee details:", {
     Name: employee.name,
     Age: employee.age,
     Department: employee.department,
     Position: employee.position,
     "Active Status": employee.isActive
+});
+
+// Task 4 - Initialize customers array with objects
+let customers = [
+    {
+        name: "Jason Calliste",
+        email: "Jason.Calliste@gmail.com",
+        purchaseAmount: 150
+    },
+    {
+        name: "Gavrie Grant",
+        email: "Gavrie.grant@gmail.com",
+        purchaseAmount: 300
+    },
+    {
+        name: "Michael Blackburne",
+        email: "michael.blackburne@gmail.com",
+        purchaseAmount: 75
+    }
+];
+
+// Added a new customer object to the array
+customers.push({
+    name: "Emma Grant",
+    email: "emma.grant@gmail.com",
+    purchaseAmount: 200
+});
+
+// Loged the entire customer list 
+console.log("Customer List:");
+customers.forEach((customer, index) => {
+    console.log(`
+    Name: ${customer.name}
+    Email: ${customer.email}
+    Purchase Amount: $${customer.purchaseAmount}`);
 });
